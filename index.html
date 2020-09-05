@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Relief Point</title>
+</head>
+<body>
+
+    <div class="top">
+        <img src="logo.png" alt="">
+        <!-- <p class="title">Relief Point</p> -->
+        <p>The best headache relief website out there. </p>
+        <p>Ease head, neck and shoulder pain by massaging pressure points.</p>
+        <p>Get started right now by scrolling down and starting your headache relief journey!</p>
+    </div>
+    <div class="intro">
+        <div class="arrow bounce">
+            <a class="fa fa-arrow-down fa-4x" href="#face"></a>
+        </div>
+    </div>
+
+    <div class="content">
+        <img class="imgA1 model" src="lady.png" id="face">
+        <img class="imgB1 model" src="forehead.png" id="forehead" onclick="showInfo1()">
+        <img class="imgC1 model" src="eyes.png" id="eyes" onclick="showInfo2()">
+        <img class="imgD1 model" src="neck.png" id="neck" onclick="showInfo3()">
+        <img class="imgE1 model" src="shoulder.png" id="shoulder" onclick="showInfo4()">
+        <p id="infoTitle"></p>
+        <p id="info"></p>
+    </div>
+    <p class="instructions" id="instructions">Click your area of concern to get started!</p>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+        function showInfo1() {
+            moveAssets();
+            rid();
+            $('#forehead').addClass('highlight');
+            $('#eyes').removeClass('highlight');
+            $('#neck').removeClass('highlight');
+            $('#shoulder').removeClass('highlight');
+            document.getElementById('infoTitle').innerHTML = "Head and Neck Tension <br>";
+            document.getElementById('info').innerHTML = "Union Valley <br><br><img src='hand.png' style='width:150px;'/><br><br>" + "1. Start by pinching this area with the thumb and index finger of your opposite hand firmly — but not painfully — for 10 seconds." +
+            "<br><br> 2. Next, make small circles with your thumb on this area in one direction and then the other, for 10 seconds each. <br><br> 3. Repeat this process on the Union Valley point on your opposite hand.";
+        }
+
+        function showInfo2() {
+            moveAssets();
+            rid();
+            $('#eyes').addClass('highlight');
+            $('#forehead').removeClass('highlight');
+            $('#neck').removeClass('highlight');
+            $('#shoulder').removeClass('highlight');
+            document.getElementById('infoTitle').innerHTML = "Eyestrain and Sinus Pain<br>";
+            document.getElementById('info').innerHTML = "Drilling Bamboo <br><br><img src='bamboo.png' style='height:150px;'/><br><br>" + "1. Use both of your index fingers to apply firm pressure to both points at once." +
+            "<br><br> 2. Hold for 10 seconds.<br><br> 3. Release and repeat.";
+        }
+
+        function showInfo3() {
+            moveAssets();
+            rid();
+            $('#neck').addClass('highlight');
+            $('#forehead').removeClass('highlight');
+            $('#eyes').removeClass('highlight');
+            $('#shoulder').removeClass('highlight');
+            document.getElementById('infoTitle').innerHTML = "Neck Tension<br>";
+            document.getElementById('info').innerHTML = "Gates of Consciousness<br><br><img src='gates.png' style='height:150px;'/><br><br>" + "1. Place your index and middle fingers of either hand onto these pressure points." +
+            "<br><br> 2. Press firmly upward on both sides at once for 10 seconds, then release and repeat.";
+        }
+
+        function showInfo4() {
+            moveAssets();
+            rid();
+            $('#shoulder').addClass('highlight');
+            $('#forehead').removeClass('highlight');
+            $('#eyes').removeClass('highlight');
+            $('#neck').removeClass('highlight');
+            document.getElementById('infoTitle').innerHTML = "Shoulder Tension<br>";
+            document.getElementById('info').innerHTML = "Shoulder Well<br><br><img src='back.png' style='height:150px;'/><br><br>" + "1. Use the thumb of one hand to apply firm, circular pressure to this point for 1 minute." +
+            "<br><br> 2. Then switch and repeat on the opposite side.";
+        }
+
+        function rid() {
+            $('#instructions').removeClass('instructions');
+            document.getElementById('instructions').innerHTML = "";
+        }
+
+        function moveAssets() {
+            $('#forehead').animate({
+                left: '420px',
+            });
+            $('#face').animate({
+                left: '250px',
+            });
+            $('#eyes').animate({
+                left: '415px',
+            });
+            $('#neck').animate({
+                left: '390px',
+            });
+            $('#shoulder').animate({
+                left: '253px',
+            });
+        }
+    </script>
+    
+</body>
+</html>

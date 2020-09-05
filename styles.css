@@ -1,0 +1,162 @@
+
+body {
+    background-image: linear-gradient(to bottom right,#6930c3, transparent);
+    background-color: #219ebc;
+    height: 1650px;
+    margin:0;   
+    padding:0;
+    box-sizing: border-box;
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Comfortaa', cursive;
+    font-size: 62.5%;
+    font-size: 10px;
+    text-align: center;
+}
+
+.top {
+    padding-top: 200px;
+    /* padding-left: 150px; */
+    color: white;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.intro {
+    /* background-color: white; */
+    margin: 0;
+    padding-top: 70px;
+}
+
+.content {
+    text-align: center;
+    padding-top: 240px;
+    position: relative;
+}
+
+
+.model {
+    position: absolute;
+    /* top: 250px;
+    left: 700px; */
+}
+
+.imgA1 {
+    z-index: 1;
+    top: 250px;
+    left: 700px;
+}
+
+.imgB1 {
+    width: 140px;
+    top: 310px;
+    left: 870px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.imgC1 {
+    width: 170px;
+    top: 400px;
+    left: 865px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.imgD1 {
+    width: 200px;
+    top: 530px;
+    left: 840px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.imgE1 {
+    width: 470px;
+    top: 600px;
+    left: 703px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.invisible {
+    display: none;
+}
+
+.instructions {
+    padding-top: 500px;
+    color: white;
+    font-size: 2rem;
+}
+
+.imgB1:hover {
+    filter: brightness(150%);
+}
+
+.imgC1:hover {
+    filter: brightness(150%);
+}
+
+.imgD1:hover {
+    filter: brightness(150%);
+}
+
+.imgE1:hover {
+    filter: brightness(150%);
+}
+
+.highlight {
+    filter: brightness(150%);
+}
+
+#info {
+    text-align: left;
+    padding-left: 900px;
+    padding-right: 100px;
+    color: white;
+}
+
+#infoTitle {
+    text-align: left;
+    padding-left: 900px;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+/* Arrow */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.arrow {
+  text-align: center;
+  margin: 8% 0;
+}
+.bounce {
+    margin: 0px;
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
